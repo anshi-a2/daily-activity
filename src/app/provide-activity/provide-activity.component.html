@@ -1,0 +1,48 @@
+<div class="page-header">
+<h4>SORRY.. YOU ARE NOT UPTO DATE...</h4>
+<h2> KINDLY PROVIDE YOUR ACTIVITY DETAILS!!!!</h2>
+</div>
+
+<div>
+<h3 style="text-align: center"><u>timings</u></h3>
+</div>
+
+<div class="row">
+
+<h4>Choose Any One Activity Category</h4>
+
+  <div class="col-md-4">
+     <img src="../../assets/productive.jpeg" alt="picture not available right now" class="image">
+     <div class="center-block">
+       <input type="radio" value="productiveWork" name="workOption" [(ngModel)]="productiveWork">
+       <label for="productiveWork">PRODUCTIVE WORK</label>
+     </div>
+  </div>
+
+  <div class="col-md-4">
+     <img src="../../assets/images.png" alt="picture not available right now" class="image">
+     <div class="center-block">
+       <input type="radio" id="entertainment" value="entertainment" name="workOption" [(ngModel)]="entertainment">
+       <label for="entertainment">ENTERTAINMENT</label>
+     </div>
+  </div>
+
+  <div class="col-md-4">
+     <img src="../../assets/other.jpg" alt="picture not available right now" class="image">
+     <div class="center-block">
+       <input type="radio" id="otherWork" value="otherWork" name="workOption" [(ngModel)]="otherWork">
+       <label for="otherWork">SOME OTHER WORK</label>
+     </div>
+  </div>
+
+</div>
+
+<h3>RATE YOURSELF</h3>
+<!---ADDING THE FIVE STAR RATING OPTION--->
+<app-five-star (ratingClick) = "onRatingClicked($event)"></app-five-star>
+
+<h3>COMMENT SOMETHING FOR YOUR WORK</h3>
+<textarea class="center-block" rows="5" cols="90" [(ngModel)] = "comment"></textarea>
+<div class="submit">
+<button class="btn btn-success" (click)="onActivitySubmit()">SUBMIT</button>
+</div>
